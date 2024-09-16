@@ -27,8 +27,6 @@ Antes de começar, você precisa ter o Python instalado em sua máquina. Este pr
 
   Use o gerenciador de pacotes de sua distribuição. Por exemplo, no Ubuntu, execute:
 
-     ```
-    
     sudo apt update
 
 ### Instalação das Dependências
