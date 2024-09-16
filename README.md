@@ -19,7 +19,7 @@ Antes de começar, você precisa ter o Python instalado em sua máquina. Este pr
 
 2. Execute o seguinte comando no Terminal:
 
-   ```bash
+   ```
    brew install python
    ```
 
