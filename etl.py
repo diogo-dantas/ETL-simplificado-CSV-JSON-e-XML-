@@ -68,4 +68,39 @@ def transform(data):
 def load_data(target_file, transformed_data): 
     transformed_data.to_csv(target_file) 
 
+def log_progress(message): 
+    timestamp_format = '%Y-%h-%d-%H:%M:%S' # Year-Monthname-Day-Hour-Minute-Second 
+    now = datetime.now() # get current timestamp 
+    timestamp = now.strftime(timestamp_format) 
+    with open(log_file,"a") as f: 
+        f.write(timestamp + ',' + message + '\n')     
+ 	
 
+# Log de inicialização.
+log_progress("ETL Job Started") 
+ 
+# Log para o início do processo de extração.
+log_progress("Extract phase Started") 
+extracted_data = extract() 
+ 
+# Extração completa
+log_progress("Extract phase Ended") 
+ 
+# Inicio da transformação dos dados.
+log_progress("Transform phase Started") 
+transformed_data = transform(extracted_data) 
+print("Transformed Data") 
+print(transformed_data) 
+ 
+# Processo de transformação completo. 
+log_progress("Transform phase Ended") 
+ 
+# Inicio de processo de carga dos dados
+log_progress("Load phase Started") 
+load_data(target_file,transformed_data) 
+ 
+# Carga completa. 
+log_progress("Load phase Ended") 
+ 
+# Processo de ETL concluído.
+log_progress("ETL Job Ended")
