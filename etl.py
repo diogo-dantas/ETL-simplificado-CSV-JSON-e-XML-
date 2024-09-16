@@ -53,4 +53,19 @@ def extract():
              
     return extracted_data 
     
+'''Converte polegadas em metros e arredonda para duas casas decimais. 
+1 polegada equivale a 0,0254 metros 
+Converte libras em quilogramas e arredonda para duas casas decimais. 
+1 libra equivale a 0,45359237 quilogramas '''    
+
+def transform(data): 
+    data['height'] = round(data.height * 0.0254,2) 
+    data['weight'] = round(data.weight * 0.45359237,2) 
+    return data 
+
+# Carrega o o arquivo transformado para o arquivo csv a ser carregado em um banco de dados
+
+def load_data(target_file, transformed_data): 
+    transformed_data.to_csv(target_file) 
+
 
