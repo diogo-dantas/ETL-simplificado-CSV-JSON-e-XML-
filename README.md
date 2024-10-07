@@ -1,6 +1,6 @@
 # ETL-simplificado-CSV-JSON-e-XML
 
-Projeto de ETL simplificado em python para arquivos com extensão csv, json e xml.
+Projeto de ETL simplificado em python para compilar arquivos gerados em um diretório centralizado com extensão csv, json e xml.
 
 ## Pré-requisitos
 
@@ -28,6 +28,13 @@ Antes de começar, você precisa ter o Python instalado em sua máquina. Este pr
   Use o gerenciador de pacotes de sua distribuição. Por exemplo, no Ubuntu, execute:
 
     sudo apt update
+
+### Instalação
+Clone o repositório:
+   ```bash
+   git clone https://github.com/diogo-dantas/ETL-simplificado-CSV-JSON-e-XML-.git
+   cd ETL-simplificado-CSV-JSON-e-XML-
+   ```
 
 ### Instalação das Dependências
 
